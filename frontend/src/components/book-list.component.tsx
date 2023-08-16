@@ -119,7 +119,7 @@ export default class BookList extends Component<Props, State>{
                 <div className="cover"/>
               </div>
               <div className="col-9">
-              <h4>Book</h4>
+              <h4>Book details</h4>
               <div>
                 <label>
                   <strong>Title:</strong>
