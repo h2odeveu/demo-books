@@ -21,7 +21,6 @@ services:
     container_name: bunnyshell-books-db
     image: postgres
     restart: always
-    user: postgres
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
@@ -38,7 +37,7 @@ services:
         args:
           REACT_APP_BASE_API: ${BACKEND_URL-http://books-api.local.bunnyshell.com:3080}
       volumes:
-        - ./frontend:/var/www/frontend:delegated
+        - ./frontend:/var/www/frontend
       ports:
         - "8080:8080"
 
